@@ -2,8 +2,9 @@
 a simple websocket frame parser
 
 
-wspaser()
+`wspaser()`
 返回值
+```
 {
   FIN: number,
   mask: number,
@@ -13,9 +14,11 @@ wspaser()
   opcode: number,
   data: Buffer,
 }
+```
 
 
-encodeWsData(wsdata);
+`encodeWsData(wsdata);`
+```
 wsdata:{
     RSV1:number = 0,
     RSV2:number = 0,
@@ -24,7 +27,8 @@ wsdata:{
     opcode: number,
     data: string | Buffer | Uint8Array,
 }
-返回值
+```
+返回值  
 UInt8Array
 
 FIN会根据传入的data自动产生。
